@@ -26,6 +26,7 @@ data/raw/*
 !data/raw/.gitkeep
 models/*
 !models/.gitkeep
+!models/best_model.joblib
 reports/*
 !reports/.gitkeep
 

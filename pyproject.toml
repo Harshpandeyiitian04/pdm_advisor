@@ -1,2 +1,16 @@
+[project]
+name = "pdm-advisor"
+version = "0.1.0"
+description = "Predictive maintenance API for NASA C-MAPSS engine data"
+requires-python = ">=3.11,<3.13"
+dependencies = [
+	"fastapi>=0.110",
+	"joblib>=1.3",
+	"numpy>=1.26",
+	"pandas>=2.1",
+	"scikit-learn>=1.4",
+	"xgboost-cpu>=2.1.1",
+]
+
 [tool.vercel]
 entrypoint = "app.api:app"

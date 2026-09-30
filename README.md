@@ -80,11 +80,11 @@ The dashboard includes fleet overview, single-engine sensor/RUL detail, model co
 - `reports/deep_results_FD001.json`: optional LSTM experiment metrics.
 - `models/best_model.joblib`: model artifact used by the API.
 
-Generated reports and model artifacts are ignored by Git and must be recreated locally. The source project does not include the NASA raw files or a ready-to-deploy trained model.
+Generated reports are ignored by Git. The trained `models/best_model.joblib` artifact is included for API deployment; the original NASA raw files remain ignored and are not part of the source repository.
 
 ## Deployment status
 
-The local Streamlit dashboard, FastAPI app, and Docker API image have been tested. The project is not hosted in the cloud. Publishing requires a hosting account, a deployment configuration, and a trained model artifact supplied to the remote build. Do not describe it as deployed until the hosted URL has been tested.
+The local Streamlit dashboard, FastAPI app, and Docker API image have been tested. The project is not hosted in the cloud. Publishing requires a hosting account and a deployment; do not describe it as deployed until the hosted URL has been tested.
 
 ## Run locally
 
@@ -105,7 +105,7 @@ The dashboard opens at `http://localhost:8501`; FastAPI docs are at `http://127.
 
 ### Docker
 
-The Docker image uses CPU-only XGBoost. A model trained with a different XGBoost version may emit a serialization-version warning; host and container predictions were compared on FD001 and matched. `models/*.joblib` is ignored by Git, so a remote image build must be given a trained model artifact separately. Do not add the raw NASA data to the image or source repository.
+The Docker image uses CPU-only XGBoost. A model trained with a different XGBoost version may emit a serialization-version warning; host and container predictions were compared on FD001 and matched. The trained model is included as a small deployment artifact. Do not add the raw NASA data to the image or source repository.
 
 Build and run the API container with:
 
