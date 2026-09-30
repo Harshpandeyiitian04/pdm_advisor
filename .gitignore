@@ -1,0 +1,38 @@
+# Python environments and generated files
+.venv/
+venv/
+ENV/
+__pycache__/
+**/__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+build/
+dist/
+*.egg-info/
+
+# Local secrets and environment files
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+
+# Local data and generated model/report artifacts
+data/raw/*
+!data/raw/.gitkeep
+models/*
+!models/.gitkeep
+reports/*
+!reports/.gitkeep
+
+# Temporary and machine-specific files
+*.log
+.DS_Store
+Thumbs.db
+desktop.ini
+Screenshot 2026-09-30*.png
+dashboard-engine-current.png
