@@ -86,12 +86,13 @@ The FD001 benchmark files and generated reports listed above are included so the
 
 The FastAPI service is deployed on Vercel:
 
+- Streamlit dashboard: [Predictive Maintenance Advisor](https://pdm-advisor-harsh-pandey.streamlit.app/)
 - API deployment: [pdm-advisor on Vercel](https://pdm-advisor-bg88g35s8-harsh-pandeys-projects-8a829553.vercel.app/)
 - Interactive API documentation: [Swagger UI](https://pdm-advisor-bg88g35s8-harsh-pandeys-projects-8a829553.vercel.app/docs)
 - Health check: [GET /health](https://pdm-advisor-bg88g35s8-harsh-pandeys-projects-8a829553.vercel.app/health)
 - Prediction route: `POST /predict` (see Swagger UI for the request schema)
 
-The Vercel deployment currently redirects unauthenticated requests through Vercel SSO, so access requires authorization. The Streamlit dashboard is a separate app and is not hosted at the Vercel URL; `python -m streamlit run app/dashboard.py` runs it locally. Deploy it separately to make the dashboard available online.
+The dashboard and API are separate deployments. The Vercel deployment currently redirects unauthenticated requests through Vercel SSO, so API access requires authorization. To run the dashboard locally, use `python -m streamlit run app/dashboard.py`.
 
 ## Run locally
 
