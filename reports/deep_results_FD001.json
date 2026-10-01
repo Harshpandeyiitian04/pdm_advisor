@@ -1,0 +1,15 @@
+{
+  "subset": "FD001",
+  "model": "PyTorch LSTM",
+  "window_cycles": 30,
+  "epochs_completed": 20,
+  "best_validation_mse": 152.34065181347896,
+  "val_rmse": 12.330046722083543,
+  "val_nasa_score": 15607.682096005672,
+  "test_rmse": 14.789064700226149,
+  "test_nasa_score": 688.4684876215098,
+  "train_engines": 80,
+  "validation_engines": 20,
+  "test_engines": 100,
+  "synthetic_data": false
+}

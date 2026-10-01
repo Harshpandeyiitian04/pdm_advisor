@@ -24,11 +24,22 @@ dist/
 # Local data and generated model/report artifacts
 data/raw/*
 !data/raw/.gitkeep
+!data/raw/train_FD001.txt
+!data/raw/test_FD001.txt
+!data/raw/RUL_FD001.txt
 models/*
 !models/.gitkeep
 !models/best_model.joblib
 reports/*
 !reports/.gitkeep
+!reports/results.json
+!reports/test_predictions.csv
+!reports/feature_importance.csv
+!reports/sensitivity.csv
+!reports/maintenance_memo.md
+!reports/eda_report.md
+!reports/sensor_trends.csv
+!reports/deep_results_FD001.json
 
 # Temporary and machine-specific files
 *.log

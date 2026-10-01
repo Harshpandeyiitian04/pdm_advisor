@@ -1,0 +1,50 @@
+{
+  "subset": "FD001",
+  "synthetic_data": false,
+  "best_model": "XGBoost",
+  "models": [
+    {
+      "model": "Ridge (baseline)",
+      "val_rmse": 19.01010731021065,
+      "test_rmse": 20.73094389109376,
+      "test_nasa_score": 1425.9860277075913
+    },
+    {
+      "model": "Random Forest",
+      "val_rmse": 16.43570121154958,
+      "test_rmse": 19.321690652007998,
+      "test_nasa_score": 1723.6181835044933
+    },
+    {
+      "model": "HistGradientBoosting",
+      "val_rmse": 16.250631389241992,
+      "test_rmse": 18.37167979205051,
+      "test_nasa_score": 1350.0605472886639
+    },
+    {
+      "model": "XGBoost",
+      "val_rmse": 16.244480628823577,
+      "test_rmse": 18.19065326033745,
+      "test_nasa_score": 1175.1630911749928
+    }
+  ],
+  "final_test_rmse": 18.394785340096035,
+  "final_test_nasa_score": 1086.667305580511,
+  "cost_assumptions": {
+    "failure_cost": 50000.0,
+    "planned_cost": 8000.0,
+    "waste_per_cycle": 60.0,
+    "safety_margin": 15,
+    "fixed_age": 139
+  },
+  "cost_comparison": {
+    "run_to_failure": 5000000.0,
+    "fixed_schedule": 1093760.0,
+    "predictive": 1931932.0432853699,
+    "failures_fixed": 0,
+    "failures_predictive": 25,
+    "n_engines": 100,
+    "saving_vs_run_to_failure_pct": 61.361359134292606,
+    "saving_vs_fixed_pct": -76.63217189194795
+  }
+}

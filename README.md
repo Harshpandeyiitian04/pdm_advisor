@@ -80,7 +80,7 @@ The dashboard includes fleet overview, single-engine sensor/RUL detail, model co
 - `reports/deep_results_FD001.json`: optional LSTM experiment metrics.
 - `models/best_model.joblib`: model artifact used by the API.
 
-Generated reports are ignored by Git. The trained `models/best_model.joblib` artifact is included for API deployment; the original NASA raw files remain ignored and are not part of the source repository.
+The FD001 benchmark files and generated reports listed above are included so the hosted Streamlit dashboard can render its existing results. The trained `models/best_model.joblib` artifact is included for API deployment. Other raw datasets, generated outputs, and private data remain ignored.
 
 ## Deployment status
 
@@ -95,7 +95,7 @@ The Vercel deployment currently redirects unauthenticated requests through Verce
 
 ## Run locally
 
-Use Python 3.11 or a compatible environment, install requirements, and put the original NASA files in `data/raw/` (instructions in [data/README.md](data/README.md)). Raw files are ignored by Git; do not commit the dataset.
+Use Python 3.11 or a compatible environment and install requirements. This demo repository includes only the original FD001 benchmark files required by the dashboard; do not add private or unrelated datasets.
 
 ```powershell
 python -m pip install -r requirements.txt
@@ -112,7 +112,7 @@ The dashboard opens at `http://localhost:8501`; FastAPI docs are at `http://127.
 
 ### Docker
 
-The Docker image uses CPU-only XGBoost. A model trained with a different XGBoost version may emit a serialization-version warning; host and container predictions were compared on FD001 and matched. The trained model is included as a small deployment artifact. Do not add the raw NASA data to the image or source repository.
+The Docker image uses CPU-only XGBoost. A model trained with a different XGBoost version may emit a serialization-version warning; host and container predictions were compared on FD001 and matched. The trained model is included as a small deployment artifact. Docker excludes the benchmark data; the Streamlit dashboard uses the tracked FD001 files from the source repository.
 
 Build and run the API container with:
 
