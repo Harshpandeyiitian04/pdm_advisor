@@ -84,7 +84,14 @@ Generated reports are ignored by Git. The trained `models/best_model.joblib` art
 
 ## Deployment status
 
-The local Streamlit dashboard, FastAPI app, and Docker API image have been tested. The project is not hosted in the cloud. Publishing requires a hosting account and a deployment; do not describe it as deployed until the hosted URL has been tested.
+The FastAPI service is deployed on Vercel:
+
+- API deployment: [pdm-advisor on Vercel](https://pdm-advisor-bg88g35s8-harsh-pandeys-projects-8a829553.vercel.app/)
+- Interactive API documentation: [Swagger UI](https://pdm-advisor-bg88g35s8-harsh-pandeys-projects-8a829553.vercel.app/docs)
+- Health check: [GET /health](https://pdm-advisor-bg88g35s8-harsh-pandeys-projects-8a829553.vercel.app/health)
+- Prediction route: `POST /predict` (see Swagger UI for the request schema)
+
+The Vercel deployment currently redirects unauthenticated requests through Vercel SSO, so access requires authorization. The Streamlit dashboard is a separate app and is not hosted at the Vercel URL; `python -m streamlit run app/dashboard.py` runs it locally. Deploy it separately to make the dashboard available online.
 
 ## Run locally
 
