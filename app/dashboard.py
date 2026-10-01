@@ -1,15 +1,21 @@
 """Streamlit dashboard. Run: python -m streamlit run app/dashboard.py"""
 import json
+import sys
 from pathlib import Path
 import joblib
 import pandas as pd
 import streamlit as st
+
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
+if str(PROJECT_ROOT) not in sys.path:
+    sys.path.insert(0, str(PROJECT_ROOT))
+
 from src import data as D
 from src.business_case import BusinessCaseAssumptions, compare_business_case
 from src.decision import CostAssumptions, compare_policies, sensitivity
 
-R = Path(__file__).resolve().parents[1] / "reports"
-MODEL_PATH = Path(__file__).resolve().parents[1] / "models" / "best_model.joblib"
+R = PROJECT_ROOT / "reports"
+MODEL_PATH = PROJECT_ROOT / "models" / "best_model.joblib"
 st.set_page_config(page_title="Predictive Maintenance Advisor", layout="wide")
 st.title("Predictive Maintenance Advisor")
 
