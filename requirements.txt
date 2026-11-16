@@ -1,12 +1,22 @@
+# Number tools.
 numpy>=1.26
+# Tables of data.
 pandas>=2.1
+# The machine-learning tools.
 scikit-learn>=1.4
+# Saves and loads the trained model.
 joblib>=1.3
+# Lets the program call web services.
 requests>=2.31
+# The web service framework.
 fastapi>=0.110
+# The program that runs the web service.
 uvicorn>=0.29
+# The on-screen dashboard.
 streamlit>=1.33
+# The tool that runs the checks.
 pytest>=8.0
+# A helper the checks use to call the web service.
 httpx>=0.27
-# Optional CPU-only XGBoost, often improves results:
+# An extra optional model that often guesses a bit better. It runs on the normal processor only.
 xgboost-cpu>=2.1.1

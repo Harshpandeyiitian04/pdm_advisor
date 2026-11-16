@@ -1,27 +1,31 @@
-# Python environments and generated files
+# Folders for local Python setups. These should not be saved with the project.
 .venv/
 venv/
 ENV/
+# Saved Python bytecode. The computer rebuilds this on its own.
 __pycache__/
 **/__pycache__/
 *.py[cod]
 *$py.class
+# Caches from checkers and test tools.
 .pytest_cache/
 .mypy_cache/
 .ruff_cache/
 .coverage
 htmlcov/
+# Packaged build output.
 build/
 dist/
 *.egg-info/
 
-# Local secrets and environment files
+# Secret keys and local environment files. Keep the example file.
 .env
 .env.*
 !.env.example
 .streamlit/secrets.toml
 
-# Local data and generated model/report artifacts
+# Local data and generated model or report files.
+# The lines that start with ! put a few real result files back so they stay in the project.
 data/raw/*
 !data/raw/.gitkeep
 !data/raw/train_FD001.txt
@@ -41,7 +45,7 @@ reports/*
 !reports/sensor_trends.csv
 !reports/deep_results_FD001.json
 
-# Temporary and machine-specific files
+# Temporary files and files that belong to one computer.
 *.log
 .DS_Store
 Thumbs.db

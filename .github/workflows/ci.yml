@@ -1,12 +1,21 @@
+# This file tells the computer to check the project automatically whenever someone saves work or proposes a change.
 name: CI
+# Run that check on every save and every proposed change.
 on: [push, pull_request]
 jobs:
+  # The job that runs the checks.
   test:
+    # Use a fresh Linux computer in the cloud.
     runs-on: ubuntu-latest
     steps:
+      # Download this project.
       - uses: actions/checkout@v4
+      # Install Python 3.11.
       - uses: actions/setup-python@v5
         with: { python-version: "3.11" }
+      # Install the libraries this project needs.
       - run: pip install -r requirements.txt
+      # Run the automated checks quietly.
       - run: pytest -q
-      - run: python -m src.train --synthetic   # smoke test on fake data
+      # Do a quick practice run on fake data to make sure training starts.
+      - run: python -m src.train --synthetic

@@ -1,3 +1,4 @@
+# Leave these out of the packaged web service. They are local setups, history, checks, raw data, reports, and pictures.
 .venv/
 venv/
 .git/
